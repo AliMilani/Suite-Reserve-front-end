@@ -1,0 +1,13 @@
+/* import Fonts */
+@import url(./font-face.css);
+@import url(./custom.css);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer components {
+    .reservation-modal .vs-popup {
+        @apply w-full lg: w-1/2 max-w-[1200px]
+    }
+} */

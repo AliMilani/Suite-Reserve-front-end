@@ -1,0 +1,269 @@
+:root {
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --slate-100: #f1f5f9;
+}
+
+/* bg patern */
+body {
+  background-size: 70px;
+}
+
+.facilities_items:hover {
+  transform: scale(1.1);
+  color: #498d50;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(0eg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.facilities_items:hover img {
+  animation: shake 0.82s;
+}
+
+/* active route */
+.router-link-active.router-link-exact-active {
+  color: #146d1e;
+  font-weight: bold;
+}
+
+/* scroll bar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  width: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2c2c2c;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2c2c2cc0;
+}
+
+/* custom styles */
+.space-input input {
+  padding-left: 30px !important;
+}
+
+/* props */
+.vs-popup-primary {
+  padding: 0 10px;
+}
+
+/* selectbox */
+.vs-select--options {
+  z-index: 9999999999999999;
+}
+
+.vs-select--icon {
+  top: 60%;
+}
+
+.vs-radio--label {
+  white-space: nowrap;
+}
+
+.loginPage .vs-inputx {
+  direction: ltr;
+}
+
+.con-vs-loading {
+  position: absolute;
+}
+
+/* fade animation */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* darkmode */
+
+.dark .vs-input--label,
+.dark .vs-select--label {
+  color: white !important;
+}
+
+.dark .vs-input--input,
+.dark .vs-textarea--input,
+.dark .vs-select--input {
+  color: white !important;
+  background: #232c39 !important;
+}
+
+.dark .vs-select--options {
+  background: var(--slate-800);
+  color: var(--slate-100) !important;
+}
+
+.dark .vs-select--options .vs-select--item {
+  color: white !important;
+  border: none;
+}
+
+.dark .vs-select--options .vs-select--item:hover {
+  background-color: var(--slate-900);
+}
+
+/* popup */
+.dark .vs-popup {
+  background: var(--slate-900) !important;
+}
+
+.dark .vs-popup--header {
+  background: var(--slate-800) !important;
+  color: white;
+}
+
+.dark .vs-popup--close {
+  background: var(--slate-900) !important;
+  color: white !important;
+}
+
+/* scroll */
+/* Handle */
+.dark ::-webkit-scrollbar-thumb {
+  background: #e3e3e367;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* Handle on hover */
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #dfdfdfc0;
+}
+
+/* tables */
+.dark .vs-con-table {
+  background: transparent !important;
+}
+
+.dark .tr-table-state-primary,
+.dark .vs-table-primary .is-selected {
+  background: rgba(var(--vs-primary), 0.05) !important;
+  color: var(--slate-100) !important;
+}
+
+.dark .vs-table--tbody-table tr {
+  background: transparent;
+  color: var(--slate-100) !important;
+  box-shadow: none !important;
+}
+
+.dark .vs-pagination--ul {
+  background: var(--slate-800);
+}
+
+.dark .vs-pagination--li {
+  color: var(--slate-100) !important;
+}
+
+.dark .vs-pagination--buttons {
+  background-color: #146d1e;
+  color: white;
+}
+
+.dark .vs-pagination--buttons:hover {
+  background: #0c3c12 !important;
+  color: white;
+}
+
+/* dialog */
+.dark .vs-dialog {
+  background: var(--slate-900) !important;
+  color: white;
+}
+
+.dark .vs-dialog-header {
+  background: var(--slate-800) !important;
+}
+
+.dark .vs-dialog-cancel-button {
+  color: white !important;
+}
+
+.dark .vs-dialog-cancel {
+  background: var(--slate-900) !important;
+}
+
+/* datapicker */
+.dark .vpd-body {
+  background: var(--slate-900) !important;
+}
+
+.dark .vpd-header {
+  background: var(--slate-800) !important;
+}
+
+.dark .vpd-next,
+.dark .vpd-prev {
+  filter: brightness(0) invert(1);
+}
+
+.dark .vpd-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dark .vpd-actions button {
+  background-color: #146d1e !important;
+  color: white !important;
+  border-radius: 5px;
+}
+
+.dark .vpd-month-label span:hover {
+  color: #22c55e !important;
+}
+
+.dark .vpd-input-group .form-control {
+  background: #232c39 !important;
+  border-color: var(--slate-800);
+}
+
+.dark .vpd-day[disabled='true'] .vpd-day-text {
+  color: #6e6e6e !important;
+}
+
+.dark .invalidInput input {
+  border-color: red !important;
+}
+
+.dark .con-vs-loading {
+  background: #0f172ac7 !important;
+}
