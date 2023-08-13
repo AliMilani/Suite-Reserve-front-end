@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed, watch, inject } from 'vue'
 import { useVuelidate } from '@vuelidate/core'
-import { required, helpers } from '@vuelidate/validators'
+import { required, helpers, minLength } from '@vuelidate/validators'
 import { familyRelationship } from '../assets/js/_constant'
 import axios from 'axios'
 import { checkStatus } from '@/assets/js/_erHandler.js'
@@ -56,7 +56,10 @@ const checkn_ational_code = helpers.regex(/^(?!(\d)\1{9})\d{10}$/)
 
 const rules = computed(() => {
   return {
-    fullName: limit_rules('نام خانوادگی'),
+    fullName: {
+      required: helpers.withMessage(`لطفا نام و نام خانوادگی را وارد کنید.`, required),
+      min: helpers.withMessage(`نام نباید کمتر از 6 کاراکتر باشد.`, minLength(6))
+    },
     nationalCode: {
       required: helpers.withMessage(`لطفا کدملی را وارد کنید.`, required),
       check: helpers.withMessage(`کدملی اشتباه است`, checkn_ational_code)
